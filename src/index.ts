@@ -1,10 +1,10 @@
 import express from 'express';
 
+import { getMessage } from './routes';
+
 const app = express();
 
-app.get('/', (request, response) => {
-  return response.json({ message: 'Hello TypeScript!'});
-});
+app.get('/', getMessage);
 
 app.listen(3333, () => {
   console.log('Go! Go! Go! 🚀');
